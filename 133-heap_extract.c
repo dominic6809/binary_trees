@@ -155,7 +155,7 @@ void swap_tree_node_with_parent_1(heap_t **node, heap_t **root)
 			if ((*node)->parent->left != NULL)
 				(*node)->parent->left->parent = node_copy;
 			(*node)->parent = val0, (*node)->left =
-        pt->left, (*node)->right = pt;
+				pt->left, (*node)->right = pt;
 			pt->parent = node_copy, pt->left = lt, pt->right = rt;
 		}
 		else
@@ -167,7 +167,7 @@ void swap_tree_node_with_parent_1(heap_t **node, heap_t **root)
 			if ((*node)->parent->right != NULL)
 				(*node)->parent->right->parent = *node;
 			(*node)->parent = val0, (*node)->right =
-        pt->right, (*node)->left = pt;
+				pt->right, (*node)->left = pt;
 			pt->parent = node_copy, pt->left = lt, pt->right = rt;
 		}
 		if (lt != NULL)
@@ -204,12 +204,12 @@ heap_t *get_last_heap_node(const heap_t *root)
 				if (current->parent->left != NULL)
 				{
 					enqueue_item_4(&head, &tail, &n,
-            (void *)(current->parent->left));
+						(void *)(current->parent->left));
 				}
 				if (current->parent->right != NULL)
 				{
 					enqueue_item_4(&head, &tail, &n,
-            (void *)(current->parent->right));
+						(void *)(current->parent->right));
 				}
 			}
 			dequeue_item_4(&head, &tail, &n);
