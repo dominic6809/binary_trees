@@ -144,7 +144,7 @@ void swap_tree_node_with_parent_1(heap_t **node, heap_t **root)
 	if ((node != NULL) && ((*node)->parent != NULL) && (root != NULL))
 	{
 		pt = (*node)->parent, node_copy = *node,
-      val0 = (*node)->parent->parent;
+			val0 = (*node)->parent->parent;
 		lt = (*node)->left, rt = (*node)->right;
 		if ((*node)->parent->left != *node)
 		{
