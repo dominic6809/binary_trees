@@ -150,11 +150,11 @@ heap_t *get_insert_position(const heap_t *root)
 				if (current->parent->left != NULL)
 				{
 					enqueue_item_3(&head, &tail, &n,
-                    (void *)(current->parent->left));
+						(void *)(current->parent->left));
 					if (current->parent->right != NULL)
 					{
 						enqueue_item_3(&head, &tail, &n,
-                        (void *)(current->parent->right));
+							(void *)(current->parent->right));
 					}
 					else
 					{
