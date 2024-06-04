@@ -6,26 +6,20 @@
  *
  * Return: Height of the tree, 0 if tree is NULL
  */
-size_t binary_tree_height_b(const binary_tree_t *tree)
+size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t lt = 0;
-	size_t rt = 0;
+	if (tree)
+	{
+		size_t lt = 0, rt = 0;
 
-	if (tree == NULL)
-	{
-		return (0);
+		lt = tree->left ? 1 + binary_tree_height(tree->left) : 1;
+		rt = tree->right ? 1 + binary_tree_height(tree->right) : 1;
+
+		return ((lt > rt) ? lt : rt);
 	}
-	else
-	{
-		if (tree)
-		{
-			lt = tree->left ? 1 + binary_tree_height_b(tree->left) : 1;
-			rt = tree->right ? 1 + binary_tree_height_b(tree->right) : 1;
-		}
-		return ((lt > rt) ? l : rt);
-	}
+
+	return (0);
 }
-
 /**
  * binary_tree_balance - function that measures the balance factor
  * of a binary tree
