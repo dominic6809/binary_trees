@@ -35,14 +35,13 @@ size_t binary_tree_height(const binary_tree_t *tree)
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-	if (tree == NULL)
-		return (0);
+	int right = 0, left = 0, total = 0;
 
-	/* Get the height of the left and right subtrees */
-	int left_height = binary_tree_height(tree->left);
-	int right_height = binary_tree_height(tree->right);
-	int total = left_height - right_height;
-
-	/* Return the difference in height between LST and RST */
+	if (tree)
+	{
+		left = ((int)binary_tree_height_b(tree->left));
+		right = ((int)binary_tree_height_b(tree->right));
+		total = left - right;
+	}
 	return (total);
 }
