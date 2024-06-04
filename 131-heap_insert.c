@@ -191,18 +191,18 @@ void swap_tree_node_with_parent(heap_t **node, heap_t **root)
 	if ((node != NULL) && ((*node)->parent != NULL) && (root != NULL))
 	{
 		pt = (*node)->parent, node_copy = *node,
-        val0 = (*node)->parent->parent;
+			val0 = (*node)->parent->parent;
 		lt = (*node)->left, rt = (*node)->right;
 		if ((*node)->parent->left != *node)
 		{
 			if ((val0 != NULL) && (val0->left ==
-            (*node)->parent)) val0->left = *node;
+				(*node)->parent)) val0->left = *node;
 			if ((val0 != NULL) && (val0->right ==
-            (*node)->parent)) val0->right = *node;
+				(*node)->parent)) val0->right = *node;
 			if ((*node)->parent->left != NULL)
 				(*node)->parent->left->parent = node_copy;
-			(*node)->parent = val0, (*node)->left = pt->left,
-            (*node)->right = pt;
+			(*node)->parent = val0, (*node)->left =
+				pt->left, (*node)->right = pt;
 			pt->parent = node_copy, pt->left = lt, pt->right = rt;
 		}
 		else
@@ -214,7 +214,7 @@ void swap_tree_node_with_parent(heap_t **node, heap_t **root)
 			if ((*node)->parent->right != NULL)
 				(*node)->parent->right->parent = *node;
 			(*node)->parent = val0, (*node)->right =
-            pt->right, (*node)->left = pt;
+				pt->right, (*node)->left = pt;
 			pt->parent = node_copy, pt->left = lt, pt->right = rt;
 		}
 		if (lt != NULL)
