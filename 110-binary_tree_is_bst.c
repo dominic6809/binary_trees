@@ -4,8 +4,8 @@
 /**
  * is_bst_util - Helper function to check if a binary tree is a valid BST
  * @tree: Pointer to the root node of the tree to check
- * @min: Minimum value allowed for nodes in the tree
- * @max: Maximum value allowed for nodes in the tree
+ * @min: The Minimum value allowed for nodes in the tree
+ * @max: The Maximum value allowed for nodes in the tree
  *
  * Return: 1 if the tree is a valid BST, 0 otherwise
  */
