@@ -2,7 +2,7 @@
 
 /**
  * array_to_heap - function that Builds a Max Binary Heap tree from an array
- * @array: Pointer to the first element of the array to be converted
+ * @array: A Pointer to the first element of the array to be converted
  * @size: The number of elements in the array
  *
  * Return: Pointer to the root node of the created Binary Heap,
