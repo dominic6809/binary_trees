@@ -8,7 +8,7 @@ size_t height(const binary_tree_t *tree);
 int balance(const binary_tree_t *tree);
 
 /**
- * avl_insert - Inserts a value in an AVL Tree.
+ * avl_insert - function that Inserts a value in an AVL Tree.
  * @tree: A double pointer to the root node of the AVL tree for inserting.
  * @value: The value to store in the node to be inserted.
  *
