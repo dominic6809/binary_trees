@@ -5,7 +5,7 @@
  * using in-order traversal
  *
  * @tree: Pointer to the root node of the tree to traverse
- * @func: Pointer to a function to call for each node
+ * @func: A Pointer to a function to call for each node
  *
  * Description: In-order traversal visits the left subtree, then the root
  * node, and finally the right subtree.
