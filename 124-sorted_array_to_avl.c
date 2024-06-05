@@ -6,7 +6,7 @@ avl_t *aux_sort(avl_t *parent, int *array, int begin, int last);
 
 /**
  * sorted_array_to_avl - Creates an AVL tree from a sorted array
- * @array: Pointer to the sorted array
+ * @array: A Pointer to the sorted array
  * @size: Size of the sorted array
  *
  * Return: AVL tree created from the sorted array
