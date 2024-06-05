@@ -3,7 +3,7 @@
 /**
  * array_to_avl - function that Builds an AVL tree from an array
  * @array: Pointer to the first element of the array to be converted
- * @size: Number of elements in the array
+ * @size: The Number of elements in the array
  *
  * Return: Pointer to the root node of the created AVL tree,
  * or NULL on failure
