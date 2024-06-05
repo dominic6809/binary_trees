@@ -31,6 +31,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
  * @tree: Node that points to the tree to check.
  * @lower: Node that points to the lower node selected.
  * @high: Node that points to the higher node selected.
+ *
  * Return: 1 if tree is AVL, 0 if not.
  */
 int bal_avl(const binary_tree_t *tree, int lower, int high)
