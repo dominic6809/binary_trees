@@ -224,4 +224,3 @@ void swap_tree_node_with_parent(heap_t **node, heap_t **root)
 		if (val0 == NULL)
 			*root = node_copy;
 	}
-}
