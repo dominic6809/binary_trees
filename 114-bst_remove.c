@@ -33,7 +33,7 @@ bst_t *inorder_successor(bst_t *root)
 
 /**
  * bst_remove_recursive - Removes a node from a BST recursively.
- * @root: A pointer to the root node of the BST to remove a node from.
+ * @root: pointer to the root node of the BST to remove a node from.
  * @node: A pointer to the current node in the binary search tree.
  * @value: The value to remove from the BST.
  *
