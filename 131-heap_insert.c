@@ -3,14 +3,14 @@
 /* Function prototypes */
 heap_t *heap_insert(heap_t **root, int value);
 void enqueue_item_3(heap_t **queue_h, heap_t **queue_t,
-	int *n, void *item);
+					int *n, void *item);
 heap_t *dequeue_item_3(heap_t **queue_h,
-	heap_t **queue_t, int *n);
+					   heap_t **queue_t, int *n);
 heap_t *get_insert_position(const heap_t *root);
 void swap_tree_node_with_parent(heap_t **node, heap_t **root);
 
 /**
- * heap_insert - function that Inserts a value into a max binary heap tree.
+ * heap_insert - Inserts a value into a max binary heap tree.
  * @root: A pointer to the root of the tree.
  * @value: The value to insert.
  *
@@ -53,15 +53,14 @@ heap_t *heap_insert(heap_t **root, int value)
 }
 
 /**
- * enqueue_item_3 - function that Adds an item to a queue.
+ * enqueue_item_3 - Adds an item to a queue.
  * @queue_h: pointer to the queue's head.
  * @queue_t: pointer to the queue's tail.
  * @n: A pointer to the queue's size value.
  * @item: The item to add to the queue.
- * Return: item to add to the queue.
  */
 void enqueue_item_3(heap_t **queue_h, heap_t **queue_t,
-	int *n, void *item)
+					int *n, void *item)
 {
 	heap_t *new_link;
 	heap_t *node = (heap_t *)item;
@@ -86,7 +85,7 @@ void enqueue_item_3(heap_t **queue_h, heap_t **queue_t,
 }
 
 /**
- * dequeue_item_3 - function that Removes an item from a queue.
+ * dequeue_item_3 - Removes an item from a queue.
  * @queue_h: pointer to the queue's head.
  * @queue_t: pointer to the queue's tail.
  * @n: A pointer to the queue's size value.
@@ -94,7 +93,7 @@ void enqueue_item_3(heap_t **queue_h, heap_t **queue_t,
  * Return: The value of the removed queue.
  */
 heap_t *dequeue_item_3(heap_t **queue_h,
-	heap_t **queue_t, int *n)
+					   heap_t **queue_t, int *n)
 {
 	heap_t *val0;
 	heap_t *val1;
@@ -127,7 +126,7 @@ heap_t *dequeue_item_3(heap_t **queue_h,
 }
 
 /**
- * get_insert_position - function that Gets the next available insertion
+ * get_insert_position - Gets the next available insertion
  * position for a node in a max binary heap tree.
  * @root: The root of the max binary heap tree.
  *
@@ -150,11 +149,11 @@ heap_t *get_insert_position(const heap_t *root)
 				if (current->parent->left != NULL)
 				{
 					enqueue_item_3(&head, &tail, &n,
-						(void *)(current->parent->left));
+								   (void *)(current->parent->left));
 					if (current->parent->right != NULL)
 					{
 						enqueue_item_3(&head, &tail, &n,
-							(void *)(current->parent->right));
+									   (void *)(current->parent->right));
 					}
 					else
 					{
@@ -177,21 +176,19 @@ heap_t *get_insert_position(const heap_t *root)
 }
 
 /**
- * swap_tree_node_with_parent - function that Swaps a node in a
+ * swap_tree_node_with_parent - Swaps a node in a
  * max binary heap tree with its parent.
  * @node: A pointer to the node's address.
  * @root: A pointer to the root of the tree.
- * Return: maximum swapped nodes, otherwise NULL
  */
 void swap_tree_node_with_parent(heap_t **node, heap_t **root)
 {
 	heap_t *node_copy, *pt, *val0, *lt, *rt;
 
-    /* swaps from the right, and then swaps from the left */
 	if ((node != NULL) && ((*node)->parent != NULL) && (root != NULL))
 	{
 		pt = (*node)->parent, node_copy = *node,
-			val0 = (*node)->parent->parent;
+		val0 = (*node)->parent->parent;
 		lt = (*node)->left, rt = (*node)->right;
 		if ((*node)->parent->left != *node)
 		{
@@ -201,9 +198,12 @@ void swap_tree_node_with_parent(heap_t **node, heap_t **root)
 				val0->right = *node;
 			if ((*node)->parent->left != NULL)
 				(*node)->parent->left->parent = node_copy;
-			(*node)->parent = val0, (*node)->left =
-				pt->left, (*node)->right = pt;
-			pt->parent = node_copy, pt->left = lt, pt->right = rt;
+			(*node)->parent = val0;
+			(*node)->left = pt->left;
+			(*node)->right = pt;
+			pt->parent = node_copy;
+			pt->left = lt;
+			pt->right = rt;
 		}
 		else
 		{
@@ -213,9 +213,12 @@ void swap_tree_node_with_parent(heap_t **node, heap_t **root)
 				val0->right = *node;
 			if ((*node)->parent->right != NULL)
 				(*node)->parent->right->parent = *node;
-			(*node)->parent = val0, (*node)->right =
-				pt->right, (*node)->left = pt;
-			pt->parent = node_copy, pt->left = lt, pt->right = rt;
+			(*node)->parent = val0;
+			(*node)->right = pt->right;
+			(*node)->left = pt;
+			pt->parent = node_copy;
+			pt->left = lt;
+			pt->right = rt;
 		}
 		if (lt != NULL)
 			lt->parent = pt;
@@ -224,3 +227,4 @@ void swap_tree_node_with_parent(heap_t **node, heap_t **root)
 		if (val0 == NULL)
 			*root = node_copy;
 	}
+}
