@@ -6,8 +6,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 /**
  * heap_to_sorted_array - Creates a sorted array from a max binary heap tree.
- * @heap: A pointer to the max binary heap.
- * @size: A pointer to the resulting array's size value.
+ * @heap: pointer to the max binary heap.
+ * @size: pointer to the resulting array's size value.
  *
  * Return: A pointer to the array, otherwise NULL.
  */
