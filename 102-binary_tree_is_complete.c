@@ -72,7 +72,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 /**
  * binary_tree_is_complete - function that Checks if a binary tree is complete
- * @tree: Pointer to the root node of the tree to check
+ * @tree: A Pointer to the root node of the tree to check
  *
  * Return: 1 if the tree is complete, 0 otherwise
  */
