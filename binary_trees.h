@@ -30,10 +30,6 @@ typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
 
-/** 
- * linked list for advanced 101 the levelorder
- */
-
 /**
  * struct link_s - structure for advanced tasks
  *
