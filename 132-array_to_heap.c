@@ -10,14 +10,14 @@
  */
 heap_t *array_to_heap(int *array, size_t size)
 {
-	size_t n;
+	size_t i;
 	heap_t *root = NULL;
 
 	if (array != NULL)
 	{
-		for (n = 0; n < size; n++)
+		for (i = 0; i < size; i++)
 		{
-			heap_insert(&root, *(array + n));
+			heap_insert(&root, *(array + i));
 		}
 	}
 	return (root);
