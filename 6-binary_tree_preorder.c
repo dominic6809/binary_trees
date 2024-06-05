@@ -5,7 +5,7 @@
  * using pre-order traversal
  *
  * @tree: Pointer to the root node of the tree to traverse
- * @func: Pointer to a function to call for each node
+ * @func: A Pointer to a function to call for each node
  *
  * Description: Pre-order traversal visits the root node first, then the left
  * subtree (LST), and finally the right subtree (RST).
