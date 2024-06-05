@@ -197,7 +197,7 @@ void swap_tree_node_with_parent(heap_t **node, heap_t **root)
 		{
 			if ((val0 != NULL) && (val0->left == (*node)->parent))
 				val0->left = *node;
-			if ((val0 != NULL) && (val0->right ==(*node)->parent))
+			if ((val0 != NULL) && (val0->right == (*node)->parent))
 				val0->right = *node;
 			if ((*node)->parent->left != NULL)
 				(*node)->parent->left->parent = node_copy;
