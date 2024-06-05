@@ -2,7 +2,7 @@
 
 /**
  * binary_tree_is_leaf - function that Checks if a node is a leaf
- * @node: Pointer to the node to check
+ * @node: A Pointer to the node to check
  *
  * Return: 1 if node is a leaf, otherwise 0
  */
@@ -20,7 +20,7 @@ int binary_tree_is_leaf(const binary_tree_t *node)
 
 /**
  * binary_tree_height - function that Measures the height of a binary tree
- * @tree: Pointer to the root node of the tree to measure the height
+ * @tree: A Pointer to the root node of the tree to measure the height
  *
  * Return: Height of the tree, 0 if tree is NULL
  */
