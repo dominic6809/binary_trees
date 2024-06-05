@@ -61,7 +61,7 @@ avl_t *avl_remove(avl_t *root, int value)
  * successor - Gets the next successor (minimum value) in the right subtree.
  * @node: pointer to the tree to check.
  *
- * Return: The minimum value in the right subtree.
+ * Return: The minimum value in the RST.
  */
 int successor(bst_t *node)
 {
