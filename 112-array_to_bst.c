@@ -2,7 +2,7 @@
 
 /**
  * array_to_bst - function that Builds a Binary Search Tree from an array
- * @array: Pointer to the first element of the array to be converted
+ * @array: A Pointer to the first element of the array to be converted
  * @size: Number of elements in the array
  *
  * Return: Pointer to the root node of the created BST,
